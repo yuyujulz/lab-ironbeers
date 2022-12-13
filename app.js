@@ -27,21 +27,19 @@ app.get('/beers', (req, res)=> {
   .getBeers()
   .then(beersFromApi => {
     res.render('beers', {beersFromApi});
+    
   })
   .catch(error => console.log(error));
 });
 
-
-// app.get(/random-beer/, (req,res) => {
-//   punkAPI
-//   .getRandom()
-//   .then(responseFromApi => {
-//     const randomBeer = responseFromApi[0];
-//     res.render('random-beer', {randomBeer});
-// })
-// .catch(error => console.log(error));
-// });
-
+ app.get('/random-beer', (req,res) => {
+   punkAPI
+   .getRandom()
+   .then(responceFromAPI => {
+    res.render('random-beer', {responceFromAPI});
+ })
+  .catch(error => console.log(error))
+ })
 
 
 

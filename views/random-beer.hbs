@@ -1,13 +1,14 @@
 
-{{!-- {{#each beers}}
+
 <div>
     <ul>
-    <img src="{{this.image_url}}" alt="{{Beer}}">
+        {{#each responceFromAPI}}
+    <img src="{{this.image}}" alt="random beer">
     <h2>{{this.name}}</h2>
     <p>{{this.description}}</p>
     <p>{{this.tagline}}</p>
     <p>{{this.food_pairing}}</p>
     <p>{{this.brewers_tips}}</p>
     </ul>
+    {{/each}}
 </div>
-{{/each}} --}}
